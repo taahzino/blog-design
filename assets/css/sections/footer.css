@@ -1,0 +1,125 @@
+@import url("../components/bottom_hover_effect.css");
+@import url("../components/footer_social.css");
+
+footer {
+    margin: 20px 0 0 0;
+    background-color: rgba(5, 14, 22, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    position: relative;
+    top: 80px;
+}
+
+.footer-items {
+    width: 100%;
+    padding: 20px 50px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.footer-items h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer-items h3::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 140px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.footer-items .about-us > h3::before {
+    width: 115px;
+}
+
+
+footer .newsletter form {
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+}
+footer .newsletter input {
+    border: none;
+    outline: none;
+    padding: 15px 5px;
+    width: 60%;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+footer .newsletter button {
+    width: 30%;
+    padding: 15px 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #15202B;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+footer .newsletter button:hover {
+    background: #0a121a;
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+
+footer .categories ul {
+    /* list-style: none; */
+    margin-left: 30px;
+}
+
+footer .categories ul li a{
+    text-decoration: none;
+    color: #eee;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer .categories ul li a::before{
+    width: 130px;
+    transform-origin: left;
+}
+
+.credit {
+    font-size: 1.1rem;
+    margin: 5px 0 10px 0;
+    padding: 5px 0 10px 0;
+    border-top: 1px solid #333;
+    width: 50%;
+    text-align: center;
+}
+
+@media screen and (max-width:1080px) {
+    footer {
+        height: auto;
+    }
+    .footer-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:750px) {
+    footer {
+        height: auto;
+    }
+    .footer-items {
+        grid-template-columns: 1fr;
+    }
+}

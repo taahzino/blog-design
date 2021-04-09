@@ -1,0 +1,135 @@
+@import url('../components/bottom_hover_effect.css');
+
+.posts {
+    padding: 10px 50px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+}
+
+.hero_posts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    z-index: 1000;
+}
+
+.hero_post {
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 20px rgba(255,255,255,0.05);
+}
+
+.hero_post_image img{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.8s ease;
+    filter: opacity(0.5);
+    z-index: -10;
+}
+.hero_post:hover img {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.hero_post_details {
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+}
+
+.hero_post_category{
+    align-self: flex-end;
+    background: rgb(23, 191, 99);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero_post_details h2 {
+    text-shadow: 2px 2px 30px #000;
+    padding: 5px 0;
+    word-break: break-all;
+}
+
+
+.sidebar {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px rgba(255,255,255,0.05);
+}
+
+.sidebar .sidebar_item {
+    margin-top: 10px;
+}
+
+.sidebar .sidebar_item h1{
+    /* background-color: rgb(23, 191, 99); */
+    color: rgb(23, 191, 99);
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-bottom:10px;
+    position: relative;
+}
+.sidebar .sidebar_item h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #eee;
+    transform-origin: center;
+}
+.sidebar .sidebar_item ul {
+    padding-left: 30px;
+}
+.sidebar .sidebar_item ul li {
+    padding: 5px 0;
+}
+.sidebar .sidebar_item ul li a{
+    color: #fff;
+    position: relative;
+}
+.sidebar .sidebar_item form {
+    display: grid;
+    width: 100%;
+    /* border: 3px solid red; */
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(auto, auto));
+    grid-gap: 5px;
+}
+.sidebar .sidebar_item form input,
+.sidebar .sidebar_item form button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 1000px;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+}
+.sidebar .sidebar_item form button{
+   cursor: pointer;
+   width: 100px;
+   transition: all 0.3s ease;
+}
+.sidebar .sidebar_item form button:hover{
+   background-color: rgb(23, 191, 99);
+   color: #fff;
+}

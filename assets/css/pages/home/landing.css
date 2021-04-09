@@ -1,0 +1,92 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* background: rgb(23, 191, 99); */
+    position: relative;
+}
+
+.home .landing {
+    padding: 10px 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.home::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('../../../images/bg.jpg');
+    background-position: right;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -999;
+}
+
+.home h1 {
+    font-size: 3rem;
+}
+
+.home p {
+    font-weight: bold;
+    width: 40%;
+}
+
+.home button {
+    height: 45px;
+    width: 150px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.home button:hover {
+    background: rgb(23, 191, 99);
+    color: #fff;
+}
+
+@media screen and (max-width:1180px) {
+    .home p {
+        width: 50%;
+    }
+}
+@media screen and (max-width:1040px) {
+    .home p {
+        width: 55%;
+    }
+}
+@media screen and (max-width:1000px) {
+    .home p {
+        width: 70%;
+    }
+}
+@media screen and (max-width:850px) {
+    .home p {
+        width: 85%;
+    }
+}
+@media screen and (max-width:720px) {
+    .home p {
+        width: 100%;
+    }
+    .home .landing {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,272 @@
+header {
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000000;
+    height: 70px;
+    line-height: 70px;
+}
+
+nav.sticky {
+    background-color: #15202B;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
+}
+
+nav .wrapper {
+    position: relative;
+    padding: 0 30px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav .logo a {
+    color: rgb(23, 191, 99);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+nav .navLinks {
+    display: inline-flex;
+}
+
+nav .navLinks li {
+    list-style: none;
+}
+
+nav .navLinks li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+}
+
+nav .navLinks li a:hover {
+    background-color: rgba(23, 191, 99, 0.1);
+    color: rgb(23, 191, 99);
+}
+
+nav .navLinks .dropdownMenu {
+    background: #5D6878;
+    width: 210px;
+    position: absolute;
+    top: 85px;
+    line-height: 50px;
+    display: none;
+}
+nav.sticky .navLinks .dropdownMenu {
+    background-color: #15202B;
+}
+
+nav .navLinks li:hover .dropdownMenu,
+nav .navLinks li:hover .megaMenuBox {
+    display: block;
+    top: 65px;
+    transition: all 0.3s ease;
+}
+
+nav .navLinks .dropdownMenu li a {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
+
+nav .navLinks .megaMenuBox {
+    position: absolute;
+    top: 65px;
+    background: transparent;
+    width: 100%;
+    left: 0;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+nav .navLinks .megaMenuBox .content {
+    background: #5D6878;
+    z-index: 1000;
+    padding: 25px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav.sticky .navLinks .megaMenuBox .content {
+    background-color: #15202B;
+}
+
+nav .navLinks .megaMenuBox .content .col {
+    width: calc(25% - 35px);
+    line-height: 60px;
+}
+
+nav .navLinks .megaMenuBox .content .col .col-header{
+    color: rgb(23, 191, 99);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+nav .navLinks .megaMenuLinks li {
+    padding: 0 20px;
+}
+nav .navLinks .megaMenuLinks li a {
+    padding: 0 20px;
+    color: #ddd;
+    display: block;
+}
+
+nav .navLinks .megaMenuLinks li a:hover {
+    color: rgb(23, 191, 99);
+}
+
+nav .menuBtn {
+    display: none;
+}
+
+@media screen and (max-width:1050px) {
+    nav .menuBtn {
+        display: block;
+    }
+    nav .menuBtn {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    nav .menuBtn.showMenu.show {
+        display: none;
+    }
+    nav .menuBtn.showMenu.hide {
+        display: block;
+    }
+    nav .menuBtn.hideMenu {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+    }
+    nav .menuBtn.hideMenu.show {
+        display: block;
+    }
+    nav .menuBtn.hideMenu.hide {
+        display: none;
+    }
+    nav .navLinks {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 350px;
+        display: block;
+        background-color: #15202B;
+        top: 0;
+        left: -100%;
+        line-height: 50px;
+        padding: 50px 10px;
+        box-shadow: 0 15px 15px rgba(0,0,0,0.15);
+        overflow-y: auto;
+        transition: all 0.3s ease;
+    }
+    nav .navLinks.active {
+        left: 0;
+    }
+    nav .navLinks::-webkit-scrollbar {
+        width: 0;
+    }
+    nav .navLinks li {
+        margin: 15px 10px;
+    }
+    nav .navLinks li a {
+        padding: 0 20px;
+        display: block;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    nav .navLinks .dropdownMenu {
+        display: block;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        top: 65px;
+        padding-left: 20px;
+        width: 100%;
+        background-color: #15202B;
+        transition: all 0.3s ease;
+    }
+    nav .navLinks .toggleMenu {
+        max-height: 0;
+        overflow: hidden;
+    }
+    nav .navLinks .toggleMenu.active {
+        max-height: 100%;
+        transition: all 0.3s ease;
+    }
+    nav .navLinks .dropdownMenu li {
+        margin: 0;
+    }
+    nav .navLinks .dropdownMenu li a {
+        font-size: 19px;
+        border-radius: 5px;
+    }
+    nav .navLinks .megaMenuBox {
+        position: static;
+        top: 65px;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        padding: 0 20px;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    nav .navLinks .megaMenuBox .content {
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+        background-color: #15202B;
+    }
+    nav .navLinks .megaMenuBox .content .col {
+        width: 100%;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    nav .navLinks .megaMenuBox .content .col:nth-child(1) {
+        border-top: 0;
+    }
+    nav .navLinks .megaMenuBox .content .megaMenuLinks {
+        padding-left: 0;
+        border-left: 0;
+    }
+    nav .navLinks .megaMenuBox .content .megaMenuLinks li {
+        margin: 0;
+    }
+    nav .navLinks .megaMenuBox .content .col-header {
+        cursor: pointer;
+        font-size: 20px;
+    }
+    nav .navLinks .megaMenuBox .megaMenuLinks {
+        max-height: 0;
+        overflow: hidden;
+    }
+    nav .navLinks .megaMenuBox .megaMenuLinks.active {
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width:885px) {
+    nav .navLinks {
+        max-width: 100%;
+        padding-left: 50px;
+    }
+}
+@media screen and (max-width:600px) {
+    nav .navLinks {
+        max-width: 100%;
+        padding-left: 10px;
+    }
+}
