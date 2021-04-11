@@ -103,7 +103,7 @@ footer .categories ul li a::before{
     margin: 5px 0 10px 0;
     padding: 5px 0 10px 0;
     border-top: 1px solid #333;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -121,5 +121,10 @@ footer .categories ul li a::before{
     }
     .footer-items {
         grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:550px) {
+    .footer-items {
+        padding: 20px;
     }
 }
