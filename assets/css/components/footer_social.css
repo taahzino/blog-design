@@ -6,13 +6,13 @@
     padding: 10px 15px;
     color: #fff;
     font-size: 20px;
-    background-color: #15202B;
+    background-color: #0a121a;
     border-radius: 10px;
 }
 
 .footer-social a:hover {
     transition: all 0.4s ease;
-    background-color: #0a121a;
+    background-color: #001;
 }
 
 .footer-social a:nth-child(1) {color: #1877F2;}

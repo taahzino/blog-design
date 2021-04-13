@@ -8,17 +8,25 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 280px;
+    min-height: 280px;
     position: relative;
+    background-color: #000;
 }
 
 .footer-items {
     width: 100%;
-    padding: 20px 50px;
+    padding: 50px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 50px;
+}
+.footer-items .about-us{
+    grid-column: span 2;
+}
+.footer-items .about-us p > a {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .footer-items h3 {
@@ -46,17 +54,33 @@ footer .newsletter form {
     align-items: center;
     /* border: 3px solid red; */
 }
+
+footer .newsletter .inputField {
+    position: relative;
+    margin: 10px 10px 10px 0;
+    border-radius: 20px;
+    background-color: #eee;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .newsletter .inputField i {
+    color: #333;
+}
+
+
 footer .newsletter input {
+    background-color: transparent;
+    padding: 0 10px;
     border: none;
     outline: none;
-    padding: 15px 20px;
     min-width: 300px;
     width: 60%;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    margin: 10px 10px 10px 0;
-    border-radius: 20px;
-    background-color: #eee;
+    
 }
 
 footer .newsletter input::selection {
@@ -104,7 +128,7 @@ footer .contact .contact-details {
     text-align: center;
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width:1180px) {
     footer {
         height: auto;
     }
@@ -112,28 +136,46 @@ footer .contact .contact-details {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media screen and (max-width:750px) {
-    footer {
-        height: auto;
-    }
+@media screen and (max-width:760px) {
     .footer-items {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media screen and (max-width:550px) {
     .footer-items {
         padding: 20px;
     }
+    footer .newsletter form {
+        display: flex;
+    }
     footer .newsletter input {
-        min-width: 280px;
+        min-width: auto;
+        max-width: 300px;
+        width: 100%;
+        padding: 0 5px;
+
     }
 }
 @media screen and (max-width:400px) {
+    footer .newsletter form {
+        display: flex;
+        flex-direction: column;
+    }
     footer .newsletter input {
         min-width: auto;
-        width: 80%;
+        width: 200px;
     }
     footer .newsletter button {
-        min-width: 60px;
+        min-width: auto;
+        width: 100px;
+    }
+}
+@media screen and (max-width:300px) {
+    footer .newsletter input {
+        width: 150px;
+    }
+    footer .newsletter button {
+        width: 100px;
     }
 }

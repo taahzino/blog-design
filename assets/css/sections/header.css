@@ -273,9 +273,16 @@ nav .menuBtn {
         padding-left: 50px;
     }
 }
+
 @media screen and (max-width:600px) {
     nav .navLinks {
         max-width: 100%;
         padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .loginMenuItem {
+        max-width: 100px;
     }
 }
