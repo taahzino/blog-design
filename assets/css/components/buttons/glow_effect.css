@@ -1,0 +1,23 @@
+.glow_effect{
+    width: 150px;
+    height: 43px;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+
+    margin: 15px 0 0 0;
+    background-color: transparent;
+    border: 2px solid rgba(23, 191, 99,0.3);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.glow_effect:hover{
+    text-shadow: 1px 1px 10px rgba(23, 191, 99,1);
+}

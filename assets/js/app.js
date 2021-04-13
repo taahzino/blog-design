@@ -5,6 +5,12 @@
  * Github: https://github.com/tushariar/blog-design
  */
 
+const nav = document.querySelector('nav');
+window.onscroll = () => {
+    nav.classList.toggle('sticky', window.scrollY > 10);
+};
+
+
 const toggleItems = document.querySelectorAll('.toggleItem');
 toggleItems.forEach(item => {
     item.addEventListener('click', (e) => {

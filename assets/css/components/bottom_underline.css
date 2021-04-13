@@ -1,0 +1,11 @@
+.bottom_underline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 120%;
+    margin-left: -10%;
+    height: 3px;
+    background: rgb(23, 191, 99);
+    transform-origin: center;
+}
