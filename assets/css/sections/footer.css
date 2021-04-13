@@ -26,6 +26,7 @@ footer {
     text-transform: uppercase;
     margin-bottom: 10px;
     position: relative;
+    color: rgb(23, 191, 99);
 }
 
 .footer-items h3::before {
@@ -38,65 +39,64 @@ footer {
     background-color: #fff;
 }
 
-.footer-items .about-us > h3::before {
-    width: 115px;
-}
+
 
 
 footer .newsletter form {
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
+    /* border: 3px solid red; */
 }
 footer .newsletter input {
     border: none;
     outline: none;
     padding: 15px 5px;
+    min-width: 300px;
     width: 60%;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    margin: 10px 0;
-    font-weight: bold;
+    margin: 10px 10px 10px 0;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #eee;
+    /* color: #fff; */
+}
+
+footer .newsletter input::selection {
+    background-color: #ccc;
 }
 
 footer .newsletter button {
-    width: 30%;
+    min-width: 70px;
+    width: 15%;
     padding: 15px 5px;
+    border-radius: 20px;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
     border: none;
+    outline: none;
     cursor: pointer;
-    background-color: #15202B;
+    background-color: rgb(23, 191, 99);
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 footer .newsletter button:hover {
-    background: #0a121a;
-    color: #fff;
-    transition: all 0.3s ease-in;
+    background: rgb(23, 191, 99);
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
 }
 
-footer .categories ul {
-    /* list-style: none; */
-    margin-left: 30px;
-}
-
-footer .categories ul li a{
-    text-decoration: none;
-    color: #eee;
-    font-weight: 600;
-    font-size: 16px;
-    position: relative;
-    display: block;
+footer .contact div {
     margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
-footer .categories ul li a::before{
-    width: 130px;
-    transform-origin: left;
+footer .contact .contact-details {
+    font-weight: bold;
 }
+
 
 .credit {
     font-size: 1.1rem;
@@ -126,5 +126,17 @@ footer .categories ul li a::before{
 @media screen and (max-width:550px) {
     .footer-items {
         padding: 20px;
+    }
+    footer .newsletter input {
+        min-width: 280px;
+    }
+}
+@media screen and (max-width:400px) {
+    footer .newsletter input {
+        min-width: auto;
+        width: 80%;
+    }
+    footer .newsletter button {
+        min-width: 60px;
     }
 }
