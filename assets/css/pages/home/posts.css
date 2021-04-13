@@ -14,11 +14,29 @@
 
 .hero_posts {
     width: 100%;
-    height: auto;
+    height: 600px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 10px;
     z-index: 1000;
+}
+
+.hero_posts .hero_post:nth-child(1) {
+    grid-column: 1 / 7;
+    grid-row: span 12;
+}
+.hero_posts .hero_post:nth-child(2) {
+    grid-column: 7 / 12;
+    grid-row: span 4;
+}
+.hero_posts .hero_post:nth-child(3) {
+    grid-column: 7 / 12;
+    grid-row: span 4;
+}
+.hero_posts .hero_post:nth-child(4) {
+    grid-column: 7 / 12;
+    grid-row: span 4;
 }
 
 .posts .wrapper {
@@ -30,15 +48,18 @@
 
 .sidebar {
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 20px rgba(255,255,255,0.05);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
 }
 
 .sidebar .sidebar_item {
-    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px rgba(255,255,255,0.05);
 }
 
 .sidebar .sidebar_item h1{
@@ -105,19 +126,42 @@
    color: #fff;
 }
 
-@media screen and (max-width:1440px) {
-    .posts {
-        grid-template-columns: 3fr 1.3fr;
-    }
+
+@media screen and (max-width:1300px) {
     .hero_posts {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+    }
+    .hero_posts .hero_post:nth-child(1) {
+        grid-column: 1 / 7;
+        grid-row: span 12;
+    }
+    .hero_posts .hero_post:nth-child(2) {
+        grid-column: 7 / 12;
+        grid-row: span 6;
+    }
+    .hero_posts .hero_post:nth-child(3) {
+        grid-column: 7 / 12;
+        grid-row: span 6;
+    }
+    .hero_posts .hero_post:nth-child(4) {
+        grid-column: 1 / 12;
+        grid-row: span 6;
     }
 }
+
 @media screen and (max-width:1200px) {
     .posts {
+        padding: 10px 30px;
+        display: grid;
         grid-template-columns: 3fr 1fr;
+        grid-gap: 10px;
+    }
+    .hero_posts {
+        height: 700px;
     }
 }
+
 @media screen and (max-width:1150px) {
     .posts {
         grid-template-columns: 6fr;
@@ -137,7 +181,7 @@
         flex-direction: column;
     }
     .sidebar .sidebar_item form input{
-        width: 80%;
+        width: 95%;
         margin: 0;
     }
     .sidebar .sidebar_item form button{
@@ -146,9 +190,6 @@
 }
 
 @media screen and (max-width:850px) {
-    .hero_posts {
-        grid-template-columns: 1fr;
-    }
     .sidebar {
         grid-template-columns: 1fr;
         justify-content: center;
@@ -169,19 +210,36 @@
     .sidebar .sidebar_item h1::before{
         width: 100%;
     }
+
+    .hero_posts {
+        padding: 0 10px;
+        height: 800px;
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: repeat(24, 1fr);
+    }
+    .hero_posts .hero_post:nth-child(1),
+    .hero_posts .hero_post:nth-child(2),
+    .hero_posts .hero_post:nth-child(3),
+    .hero_posts .hero_post:nth-child(4) {
+        grid-column: 1 / 12;
+        grid-row: span 6;
+    }
 }
+
 @media screen and (max-width:550px) {
     .posts {
         padding: 10px 20px;
     }
 }
+
 @media screen and (max-width:420px) {
     .posts {
         padding: 10px;
     }
 }
+
 @media screen and (max-width:490px) {
     .posts {
-        padding: 10px 0;
+        padding: 10px;
     }
 }

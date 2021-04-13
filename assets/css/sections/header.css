@@ -35,7 +35,6 @@ nav .logo a {
 
 nav .navLinks {
     display: inline-flex;
-    position: relative;
 }
 
 nav .navLinks li {

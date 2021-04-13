@@ -1,8 +1,9 @@
 .hero_post {
-    min-height: 350px;
     overflow: hidden;
     position: relative;
     box-shadow: 1px 1px 20px rgba(255,255,255,0.05);
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .hero_post_image img{
