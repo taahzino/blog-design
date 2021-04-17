@@ -139,7 +139,7 @@ nav .menuBtn {
 @media screen and (max-width:1050px) {
     .loginMenuItem {
         margin-left: 20px;
-        max-width: 290px;
+        max-width: 60px;
         width: 100%;
     }
     nav .menuBtn {
@@ -278,11 +278,5 @@ nav .menuBtn {
     nav .navLinks {
         max-width: 100%;
         padding-left: 10px;
-    }
-}
-
-@media screen and (max-width:350px) {
-    .loginMenuItem {
-        max-width: 100px;
     }
 }
