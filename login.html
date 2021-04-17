@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blog Project</title>
+    <link rel="shortcut icon" href="assets/images/favicon.jpg" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/pages/login/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="">
+        <div class="wrapper">
+          <div class="logo"><a href="index.html">@DevHub</a></div>
+          <ul class="navLinks">
+            <div class="menuBtn hideMenu"><i class="fas fa-times"></i></div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li>
+              <a href="#" class="dropdownItem toggleItem">Posts</a>
+              <ul class="dropdownMenu toggleMenu">
+                <li><a href="#">Guidelines </a></li>
+                <li><a href="#">Tips </a></li>
+                <li><a href="#">Adda </a></li>
+                <li><a href="#">Q/A </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="toggleItem">Programming</a>
+              <div class="megaMenuBox toggleMenu">
+                <div class="content">
+                  <div class="col">
+                    <div class="col-header">Web Design</div>
+                    <ul class="megaMenuLinks">
+                      <li><a href="#"># HTML</a></li>
+                      <li><a href="#"># CSS</a></li>
+                      <li><a href="#"># JavaScript</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <div class="col-header">Frontend</div>
+                    <ul class="megaMenuLinks">
+                      <li><a href="#"># React</a></li>
+                      <li><a href="#"># Vue</a></li>
+                      <li><a href="#"># Angular</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <div class="col-header">Backend</div>
+                    <ul class="megaMenuLinks">
+                      <li><a href="#"># Node</a></li>
+                      <li><a href="#"># Express</a></li>
+                      <li><a href="#"># MongoDB</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <div class="col-header">Tools</div>
+                    <ul class="megaMenuLinks">
+                      <li><a href="#"># Git</a></li>
+                      <li><a href="#"># GitHub</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="login.html" class="loginMenuItem"
+                ><i class="far fa-user"></i
+              ></a>
+            </li>
+          </ul>
+          <div class="menuBtn showMenu"><i class="fas fa-bars"></i></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container" id="container">
+        <div class="form_container sign_up_container">
+          <form action="#">
+            <h1>Create an account</h1>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign up</button>
+            <p>Already have an account? <a href="#" class="signInBtn link">Sign in</a> </p>
+          </form>
+        </div>
+        <div class="form_container sign_in_container">
+          <form action="#">
+            <h1>Sign in to continue</h1>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign in</button>
+            <p>Don't have an account? <a href="#" class="signUpBtn link">Sign up</a> </p>
+          </form>
+        </div>
+        <div class="overlay_container">
+          <div class="overlay">
+            <div class="overlay_panel overlay_left">
+              <h1>#DevHub</h1>
+              <p>
+                Sign up and be a part of an amazing community!
+              </p>
+              <!-- <button class="toggleForm signInBtn" id="signIn">Sign in</button> -->
+              <!-- <img src="./assets/images/signup.png" alt=""> -->
+            </div>
+            <div class="overlay_panel overlay_right">
+              <!-- <h1>New here?</h1>
+              <p>Join our amazing community by signing up.</p>
+              <button class="toggleForm signUpBtn" id="signUp">Sign Up</button> -->
+              <img src="./assets/images/login.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-items">
+        <div class="about-us">
+          <h3>About us</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis illo
+            commodi explicabo, reprehenderit iste possimus necessitatibus? Vel!
+            <a class="glow_effect">Know More</a>
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="contact">
+          <h3>Contact us</h3>
+          <div class="email">
+            Email: <br />
+            <span class="contact-details">devTahsin@outlook.com</span>
+          </div>
+          <div class="phone">
+            Phone: <br />
+            <span class="contact-details">+88018XXXXXXXX</span>
+          </div>
+        </div>
+        <div class="newsletter">
+          <h3>Get Notified</h3>
+          <p>Subscribe to our newsletter!</p>
+          <form>
+            <div class="inputField">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+            <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="credit">&copy; Designed by Tahsin Ahmed Tushar</div>
+    </footer>
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/5af3c1e219.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/login_register.js"></script>
+  </body>
+</html>
