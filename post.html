@@ -113,8 +113,11 @@
       </div>
       <div class="user_actions">
         <div>
-          <div class="action_btn"><i class="fas fa-thumbs-up"></i> Like</div>
-          <div class="action_btn toggleComment"><i class="fas fa-comment"></i> Comment</div>
+          <div class="action_btn reactBtn">
+            <i class="far fa-heart"></i> 
+            <div class="reactName">Like </div>
+          </div>
+          <div class="action_btn toggleComment"><i class="far fa-comment"></i> Comment</div>
         </div>
         <div>
           <div class="action_btn"><i class="fas fa-share-alt"></i> Share</div>
@@ -126,19 +129,22 @@
             <textarea placeholder="What's on your mind?"></textarea>
             <button>Submit</button>
           </form>
-          <h4>06 Comments</h4>
+          <h4>3 Comments</h4>
           <div class="users_comments">
             <div class="users_profile">
               <img src="./assets/images/author.jpg" alt="">
             </div>
             <div class="users_comment_area">
-              <h5 class="users_name">Talha</h5>
+              <div class="users_name">Talha</div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vel fugit nihil ducimus. ❤️
               </p>
               <div class="comment_reactions">
-                <div class="comment_reaction_btn">
-                  <i class="far fa-heart"></i> Like
+                <div class="comment_reaction_btn reactBtn">
+                  <i class="far fa-heart"></i>
+                  <div class="reactName">
+                    Like
+                  </div>
                 </div>
               </div>
             </div>
@@ -148,13 +154,16 @@
               <img src="./assets/images/25.jpg" alt="">
             </div>
             <div class="users_comment_area">
-              <h5 class="users_name">Ibn Elias</h5>
+              <div class="users_name">Ibn Elias</div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vel fugit nihil ducimus.
               </p>
               <div class="comment_reactions">
-                <div class="comment_reaction_btn">
-                  <i class="far fa-heart"></i> Like
+                <div class="comment_reaction_btn reactBtn">
+                  <i class="far fa-heart"></i>
+                  <div class="reactName">
+                    Like
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,13 +173,16 @@
               <img src="./assets/images/favicon.jpg" alt="">
             </div>
             <div class="users_comment_area">
-              <h5 class="users_name">Tahsin Ahmed</h5>
+              <div class="users_name">Tahsin Ahmed</div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vel fugit nihil ducimus.
               </p>
               <div class="comment_reactions">
-                <div class="comment_reaction_btn">
-                  <i class="far fa-heart"></i> Like
+                <div class="comment_reaction_btn reactBtn">
+                  <i class="far fa-heart"></i>
+                  <div class="reactName">
+                    Like
+                  </div>
                 </div>
               </div>
             </div>
@@ -178,39 +190,41 @@
         </div>
         <div class="comment_section_sidebar">
           <h2>More from this author</h2>
-          <div class="mini_post">
-            <div class="mini_post_image">
-              <img src="./assets/images/dreamHouse.jpg" alt="">
-            </div>
-            <div class="mini_post_details">
-              <h4 class="mini_post_title">Fall in love with nature</h4>
-              <div class="">
-                <h5 class="mini_post_author">Tahsin Ahmed</h5>
-                <a href="#" class="read">Read</a>
+          <div class="comment_section_mini_posts">
+            <div class="mini_post">
+              <div class="mini_post_image">
+                <img src="./assets/images/dreamHouse.jpg" alt="">
+              </div>
+              <div class="mini_post_details">
+                <h4 class="mini_post_title">Fall in love with nature</h4>
+                <div class="">
+                  <h5 class="mini_post_author">Tahsin Ahmed</h5>
+                  <a href="#" class="read">Read</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="mini_post">
-            <div class="mini_post_image">
-              <img src="./assets/images/desk.jpeg" alt="">
-            </div>
-            <div class="mini_post_details">
-              <h4 class="mini_post_title">Productivity hacks</h4>
-              <div class="">
-                <h5 class="mini_post_author">Tahsin Ahmed</h5>
-                <a href="#" class="read">Read</a>
+            <div class="mini_post">
+              <div class="mini_post_image">
+                <img src="./assets/images/desk.jpeg" alt="">
+              </div>
+              <div class="mini_post_details">
+                <h4 class="mini_post_title">Productivity hacks</h4>
+                <div class="">
+                  <h5 class="mini_post_author">Tahsin Ahmed</h5>
+                  <a href="#" class="read">Read</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="mini_post">
-            <div class="mini_post_image">
-              <img src="./assets/images/nature3.jpg" alt="">
-            </div>
-            <div class="mini_post_details">
-              <h4 class="mini_post_title">Photography!</h4>
-              <div class="">
-                <h5 class="mini_post_author">Tahsin Ahmed</h5>
-                <a href="#" class="read">Read</a>
+            <div class="mini_post">
+              <div class="mini_post_image">
+                <img src="./assets/images/nature3.jpg" alt="">
+              </div>
+              <div class="mini_post_details">
+                <h4 class="mini_post_title">Photography!</h4>
+                <div class="">
+                  <h5 class="mini_post_author">Tahsin Ahmed</h5>
+                  <a href="#" class="read">Read</a>
+                </div>
               </div>
             </div>
           </div>
@@ -319,5 +333,6 @@
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/comment_toggle.js"></script>
+    <script src="assets/js/like.js"></script>
   </body>
 </html>

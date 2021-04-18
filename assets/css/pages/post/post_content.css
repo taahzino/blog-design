@@ -1,0 +1,49 @@
+main .post_content {
+    width: 75%;
+    margin-top: -5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+main .post_content h2,
+main .post_content p {
+    align-self: start;
+}
+main .post_content p {
+    margin: 10px 0;
+}
+
+main .highlight {
+    font-weight: bold;
+}
+
+main .post_content a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+main .post_content img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1260px) {
+    main .post_content {
+        width: 85%;
+    }
+}
+@media screen and (max-width:1000px) {
+    main .post_content img {
+        width: 70%;
+        height: 70%;
+    }
+}
+@media screen and (max-width:500px) {
+    main .post_content img {
+        width: 100%;
+        height: 100%;
+    }
+}

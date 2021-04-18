@@ -1,0 +1,36 @@
+main .comment_section_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:1110px) {
+    main .comment_section_mini_posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:800px) {
+    main .comment_section_mini_posts {
+        grid-template-columns: 1fr;
+    }
+    .mini_post {
+        grid-template-columns: 2fr 8fr;
+    }
+}
+@media screen and (max-width:680px) {
+    .mini_post {
+        grid-template-columns: 3fr 8fr;
+    }
+}
+@media screen and (max-width:570px) {
+    .mini_post {
+        grid-template-columns: 4fr 8fr;
+    }
+}
+@media screen and (max-width:360px) {
+    .mini_post {
+        grid-template-columns: 1fr 1fr;
+    }
+}

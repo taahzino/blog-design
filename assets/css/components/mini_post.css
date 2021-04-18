@@ -1,0 +1,25 @@
+.mini_post {
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-column-gap: 10px;
+    padding: 5px 0;
+}
+
+.mini_post_image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.mini_post .mini_post_title {
+    color: var(--green);
+}
+
+.mini_post .read {
+    background-color: #eee;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--green);
+    border-radius: 5px;
+}

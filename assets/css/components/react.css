@@ -1,0 +1,17 @@
+.reactBtn {
+    color: crimson;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.reactBtn i {
+    margin-right: 5px;
+}

@@ -1,0 +1,57 @@
+:root {
+    --green: rgb(23, 191, 99);
+    --white: #fff;
+    --black: #000;
+}
+
+main .user_actions {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .user_actions > div {
+    display: flex;
+}
+
+main .user_actions .action_btn {
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: var(--green);
+}
+
+main .user_actions .action_btn i {
+    color: var(--green);
+}
+
+main .user_actions .reactBtn {
+    color: var(--green);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+@media screen and (max-width:1260px) {
+    main .user_actions {
+        width: 85%;
+    }
+}
+@media screen and (max-width:325px) {
+    main .user_actions {
+        flex-direction: column-reverse;
+    }
+    main .user_actions > div {
+        width: 100%;
+        margin-bottom: 5px;
+    } 
+    main .user_actions > div > div{
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+    } 
+}

@@ -1,0 +1,54 @@
+main .comment_section .my_comment {
+    margin-bottom: 30px;
+    position: absolute;
+    top: -5%;
+    z-index: -100;
+}
+
+main .comment_section .my_comment.show {
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+main .comment_section .my_comment textarea{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #eee;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline-color: var(--green);
+}
+
+main .comment_section .my_comment button {
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 1000px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 2px solid var(--green);
+    transition: all 0.3s ease-in-out;
+}
+
+main .comment_section .my_comment button:hover {
+    border: 2px solid var(--green);
+    background-color: transparent;
+    text-shadow: 0 0 5px #fff;
+    color: #000;
+}
+
+
+@media screen and (max-width:300px) {
+    main .comment_section .my_comment {
+        top: -1%;
+    }
+}
