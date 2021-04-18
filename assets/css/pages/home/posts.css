@@ -82,6 +82,9 @@
     transform-origin: center;
 }
 
+.sidebar .sidebar_item > div {
+    margin-top: 15px;
+}
 .sidebar .sidebar_item ul {
     padding-left: 30px;
 }

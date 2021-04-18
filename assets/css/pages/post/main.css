@@ -1,0 +1,318 @@
+/* Utility */
+@import url('./../../style.css');
+
+/* Fonts  */
+@import url('./../../fonts/google.css');
+
+/* Components  */
+@import url('../../components/hero_post.css');
+@import url('../../components/readMore.css');
+@import url('../../components/buttons/glow_effect.css');
+@import url('../../components/bottom_underline.css');
+
+/* Sections  */
+@import url('../../sections/header.css');
+@import url('../../sections/footer.css');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --green: rgb(23, 191, 99);
+    --white: #fff;
+    --black: #000;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+main h1 {
+    position: relative;
+}
+
+main .post_info {
+    width: 100%;
+    background-color: #15202B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    border-radius: 0 0 20px 20px;
+    color: var(--white);
+}
+
+main .post_info .post_meta {
+    display: flex;
+    /* border: 3px solid red; */
+}
+
+main .post_info .post_meta > div {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .post_info .author {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+main .post_info .author img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .post_info h1 {
+    color: var(--green);
+}
+
+main .post_info .author_name {
+    color: var(--green);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main .post_image {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    transform: translateY(-25%);
+}
+
+main .post_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+main .post_content {
+    width: 75%;
+    margin-top: -5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .post_content h2,
+main .post_content p {
+    align-self: start;
+}
+main .post_content p {
+    margin: 10px 0;
+}
+
+main .highlight {
+    font-weight: bold;
+}
+
+main .post_content a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+main .post_content img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+main .user_actions {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .user_actions > div {
+    display: flex;
+}
+
+main .user_actions .action_btn {
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+main .user_actions .action_btn i {
+    color: var(--green);
+}
+
+main .comment_section{
+    width: 75%;
+    margin: 30px 0 20px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* border: 3px solid red; */
+    grid-gap: 30px;
+    position: relative;
+}
+
+main .comment_section .comment_section_content  > h4 {
+    margin-bottom: 10px;
+}
+
+main .comment_section .users_comments {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+main .comment_section .users_comments .users_profile {
+    max-width: 80px;
+    width: 100%;
+    height:80px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    user-select: none;
+}
+
+main .comment_section .users_comments .users_profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main .comment_section .users_comments .users_comment_area h5 {
+    font-size: 1rem;
+}
+
+main .comment_section .users_comments .comment_reaction_btn {
+    color: crimson;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+main .comment_section .my_comment {
+    margin-bottom: 30px;
+    position: absolute;
+    top: -10%;
+    z-index: -100;
+}
+
+main .comment_section .my_comment.show {
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+main .comment_section .my_comment textarea{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #eee;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline-color: var(--green);
+}
+
+main .comment_section .my_comment button {
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 1000px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 2px solid var(--green);
+    transition: all 0.3s ease-in-out;
+}
+
+main .comment_section .my_comment button:hover {
+    border: 2px solid var(--green);
+    background-color: transparent;
+    text-shadow: 0 0 5px #fff;
+    color: #000;
+}
+
+main .comment_section_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .mini_post {
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-column-gap: 10px;
+    padding: 5px 0;
+}
+
+main .mini_post_image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+main .mini_post .mini_post_title {
+    color: var(--green);
+}
+
+main .mini_post .read {
+    background-color: #eee;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--green);
+    border-radius: 5px;
+}
+
+main .post_footer_section {
+    width: 75%;
+}
+main .similar_posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+main .similar_posts .mini_post .mini_post_image{
+    height: 155px;
+    overflow: hidden;
+}
+
+main .similar_posts .mini_post .mini_post_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .similar_posts .mini_post {
+    display: flex;
+    flex-direction: column;
+}
